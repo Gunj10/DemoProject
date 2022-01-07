@@ -1,0 +1,83 @@
+<div class="pageBackground" fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+  <mat-toolbar color="primary"> Employee Details Form</mat-toolbar>
+  <div>
+    <form [formGroup]="registerForm" name="form" autocomplete="off" fxFlexOffset="25" fxFlex="50" fxLayout="row wrap"
+      novalidate>
+      <mat-form-field fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+        <input matInput placeholder="First Name" formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+        <input matInput placeholder="Last Name" formControlName="lastName">
+      </mat-form-field>
+      <mat-form-field fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+        <input matInput placeholder="Address" formControlName="address">
+      </mat-form-field>
+      <mat-form-field fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+        <input matInput placeholder="Phone" formControlName="phone">
+      </mat-form-field>
+      <mat-form-field fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+        <input matInput placeholder="Username" formControlName="username">
+      </mat-form-field>
+      <mat-form-field fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+        <input matInput placeholder="Password" formControlName="password">
+      </mat-form-field>
+
+      <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+        <button mat-raised-button color="primary" *ngIf="!update" (click)="onSubmit()"> Add </button>
+        <button mat-raised-button color="primary" *ngIf="update" (click)="updateEmployeeRecordWithId()"> Update
+        </button>
+        <button mat-raised-button color="primary" type="reset" (click)="resetEmployee()" fxFlexOffset="5"> Reset
+        </button>
+        <button mat-raised-button color="primary" (click)="onBack()" fxFlexOffset="5"> Back </button>
+      </div>
+      <div>
+        &nbsp;&nbsp;
+      </div>
+    </form>
+  </div>
+
+  <!-- <div class="pageBackground" fxLayoutAlign="center center" fxFlexFill> -->
+  <mat-card fxFlex='75' fxLayoutAlign="center center">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef> First Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> Last Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+      </ng-container>
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef> Phone </th>
+        <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+      </ng-container>
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Username </th>
+        <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+      </ng-container>
+      <ng-container matColumnDef="password">
+        <th mat-header-cell *matHeaderCellDef> Password </th>
+        <td mat-cell *matCellDef="let element"> {{element.password}} </td>
+      </ng-container>
+      <ng-container matColumnDef="function">
+        <th mat-header-cell *matHeaderCellDef> Functions </th>
+        <td mat-cell *matCellDef="let element">
+          <button (click)="updateEmployee(element)" mat-raised-button color="primary"> Update </button>
+          <button (click)="deleteEmployee(element.id)" mat-raised-button color="primary" fxFlexOffset="5"> Delete
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card>
+  <!-- </div> -->

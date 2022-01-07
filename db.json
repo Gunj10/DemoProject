@@ -1,0 +1,68 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "GUNJAN",
+      "lastName": "SHEMBEKAR",
+      "address": "PUNE",
+      "phone": "123456789",
+      "username": "GUNJ",
+      "password": "Gunj"
+    },
+    {
+      "id": 2,
+      "firstName": "GAURAV",
+      "lastName": "SARWATE",
+      "address": "PUNE",
+      "phone": "123456789",
+      "username": "GAURAV",
+      "password": "Gaurav"
+    },
+    {
+      "id": 3,
+      "firstName": "TEST",
+      "lastName": "TEST",
+      "address": "PUNE",
+      "phone": "123456789",
+      "username": "TEST",
+      "password": "Test"
+    },
+    {
+      "firstName": "TEST2",
+      "lastName": "TEST2",
+      "address": "Pune",
+      "phone": "789456123",
+      "username": "TEST2",
+      "password": "Test",
+      "id": 4
+    },
+    {
+      "firstName": "TEST3",
+      "lastName": "TEST3",
+      "address": "Mumbai",
+      "phone": "789456123",
+      "username": "TEST3",
+      "password": "Test",
+      "id": 5
+    },
+    {
+      "firstName": "Sejal",
+      "lastName": "Shembekar",
+      "address": "Pune",
+      "phone": "789456123",
+      "username": "SEJAL1",
+      "password": "Sejal12",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

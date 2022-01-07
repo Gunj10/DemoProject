@@ -1,0 +1,17 @@
+<mat-toolbar color="primary"> Welcome to Demo Project </mat-toolbar>
+
+<div class="pageBackground" fxLayoutAlign="center center" fxFlexFill>
+  <mat-card fxFlex='25'>
+    <mat-toolbar color="primary"> Login Page </mat-toolbar>
+    <form [formGroup]="loginForm" (ngSubmit)="showEmployeeRecords()" fxLayoutAlign="stretch" fxLayout="column">
+      <mat-form-field>
+        <input formControlName="username" matInput placeholder="Username">
+      </mat-form-field>
+      <mat-form-field>
+        <input formControlName="password" matInput type="password" placeholder="Password">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary"> Login </button>
+    </form>
+  </mat-card>
+</div>
